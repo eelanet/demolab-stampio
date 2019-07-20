@@ -1,0 +1,24 @@
+<!-- Komponentin yläreunassa hakupalkki, alle listautuu haetut yritykset. -->
+<StackLayout class="container">
+    <StackLayout class="main">
+        <Label class="title" text="Yritykset"></Label>
+        <FlexboxLayout class="sb-container" flexDirection="row" justifyContent="flex-start">
+            <SearchBar (loaded)="onSearchBarLoad()" id="searchbarid" class="input" hint="Haku" [text]="searchPhrase"
+                (textChange)="onTextChanged($event)" (submit)="onSubmit($event)" dtextFieldHintColor="white">
+            </SearchBar>
+        </FlexboxLayout>
+        <ScrollView>
+            <FlexboxLayout class="flex-container" *ngIf="!isLoading">
+                <StackLayout class="company-container" *ngFor="let company of companies">
+                    <Image *ngIf="logo" class="logo company" src="~/images/AlibabaKebabaLogo.png">
+                    </Image>
+                    <Button *ngIf="!logo" class="company" textWrap="true" [text]="company.nimi"></Button>
+                </StackLayout>
+            </FlexboxLayout>
+        </ScrollView>
+    </StackLayout>
+</StackLayout>
+<!-- Näytetään latausanimaatio, kunnes yritykset on haettu tietokannasta. -->
+<FlexboxLayout justifyContent="center" alignItems="center" *ngIf="isLoading">
+    <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+</FlexboxLayout>

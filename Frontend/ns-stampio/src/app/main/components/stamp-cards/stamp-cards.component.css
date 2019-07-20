@@ -1,0 +1,49 @@
+/* Add mobile styles for the component here.  */
+.container {
+    background-color: white;
+}
+
+.main {
+    width: 95%;
+}
+
+.title {
+    margin: 20 3%;
+    color: #999;
+    font-size: 20;
+}
+
+.passit-container {
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.passi {
+    width: 46%;
+    height: 140;
+    margin: 10 1%;
+}
+
+.passi Button {
+    height: 100;
+    margin: 0;
+    padding: 10 5;
+    background: #64508c;
+    color: white;
+    font-size: 18;
+    font-weight: 500;
+    border-radius: 10;
+    border-style: solid;
+    border-width: 1;
+    border-color: #b9b7b7;
+    border-bottom-width: 3;
+    border-right-width: 3;
+}
+
+.stamps {
+    margin: 0;
+    text-align: center;
+    font-size: 17;
+}

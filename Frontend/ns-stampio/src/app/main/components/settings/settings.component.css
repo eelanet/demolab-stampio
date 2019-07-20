@@ -1,0 +1,16 @@
+/* Add mobile styles for the component here.  */
+
+.actionbar {
+    background: plum;
+    color: white;
+}
+
+.settings {
+    margin: 0 auto;
+    font-size: 22;
+    vertical-align: center;
+}
+
+.icon {
+    margin: auto 10;
+}

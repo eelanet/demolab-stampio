@@ -1,0 +1,28 @@
+/* Add mobile styles for the component here.  */
+.stamps-container {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.stamp {
+    background: #64508c;
+    margin: 5;
+    padding: 5;
+    box-sizing: border-box;
+    width: 60;
+    height: 60;
+    color: white;
+    border-radius: 10;
+}
+
+.stamp-check {
+    margin: 5;
+}
+
+.stamp-prize {
+    margin: auto;
+    padding: 20 0;
+    width: 100%;
+    height: 100%;
+}

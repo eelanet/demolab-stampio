@@ -1,0 +1,66 @@
+/* Add mobile styles for the component here.  */
+.container {
+    background-color: white;
+}
+
+.main {
+    width: 95%;
+}
+
+.sb-container {
+    padding: 6;
+    margin-bottom: 20;
+    border-radius: 20;
+    border-style: solid;
+    border-width: 1;
+    border-color: #cccccc;
+}
+
+SearchBar {
+    width: 100%;
+    padding: 0; 
+    margin: 0;
+    background: #fff;
+}
+
+.title {
+    margin: 15;
+    color: #999;
+    font-size: 20;
+}
+
+ScrollView {
+    border-style: solid;
+    border-color: #eeeeee;
+    border-top-width: 0.5;
+}
+
+.flex-container {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.company-container {
+    width: 45%;
+    height: 120;
+    margin: 10 2% 0 2%;
+}
+
+.company {
+    height: 100;
+    margin: 0;
+    padding: 10 5;
+    background: #64508c;
+    color: white;
+    font-size: 18;
+    font-weight: 500;
+    border-radius: 10;
+    border-style: solid;
+    border-width: 1;
+    border-color: #b9b7b7;
+    border-bottom-width: 3;
+    border-right-width: 3;
+}

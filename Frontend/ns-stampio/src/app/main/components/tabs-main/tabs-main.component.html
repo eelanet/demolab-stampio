@@ -1,0 +1,30 @@
+<!-- Sovelluksen yläreuna, sisältää tuotteen logon ja asetukset. 
+     Asetusten ratas-ikoni vie asetussivulle. -->
+<ActionBar class="actionbar" backgroundColor="#927fb6">
+    <GridLayout class="grid" columns="auto,*,auto">
+        <Image class="logo" col="0" src="~/images/logo_valk.png"></Image>
+        <Image class="settings" col="2" src="~/images/asetukset_icon.png" [nsRouterLink]="['/main/settings']"></Image>
+    </GridLayout>
+</ActionBar>
+<FlexboxLayout tkMainContent flexDirection="column" justifyContent="space-between">
+    <StackLayout>
+        <!-- Navigaatiopaneeli. Alle tulee näkyviin välilehtien sisältö. -->
+        <TabView selectedTabTextColor="white" tabTextColor="white" tabBackgroundColor="#927fb6"
+            androidSelectedTabHighlightColor="white">
+
+            <StackLayout *tabItem="{ title: 'Omat Passit'}">
+                <page-router-outlet name="passitTab"></page-router-outlet>
+            </StackLayout>
+
+            <StackLayout *tabItem="{ title: 'Yritykset'}">
+                <page-router-outlet name="yrityksetTab"></page-router-outlet>
+            </StackLayout>
+
+            <StackLayout *tabItem="{ title: 'Suosikit'}">
+                <page-router-outlet name="suosikitTab"></page-router-outlet>
+            </StackLayout>
+
+        </TabView>
+    </StackLayout>
+    <Button class="qr-reader" text="Lue koodi" (tap)="openModal()"></Button>
+</FlexboxLayout>

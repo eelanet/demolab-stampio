@@ -1,0 +1,66 @@
+/* Add mobile styles for the component here.  */
+FlexboxLayout {
+    margin: 0;
+    padding: 0;
+}
+
+.expire-date {
+    margin: 20 10 5 5;
+    color: #44cece;
+    width: 100;
+    text-align: center;
+}
+
+.company-title {
+    margin: 15 15 40 15;
+    padding: 15 10;
+    background: #64508c;
+    width: 220;
+    text-align: center;
+    color: white;
+    border-radius: 10;
+}
+
+.qr-reader {
+    background: #927fb6;
+    color: #fff;
+    margin: 0;
+    font-size: 20;
+    font-weight: 500;
+    padding: 20 0;
+}
+
+.card-info {
+    margin: 50 15 15 30;
+    font-size: 17;
+    color: #44cece;
+}
+
+
+.stamps-container {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.stamp {
+    background: #64508c;
+    margin: 5;
+    padding: 5;
+    box-sizing: border-box;
+    width: 60;
+    height: 60;
+    color: white;
+    border-radius: 10;
+}
+
+.stamp-check {
+    margin: 5;
+}
+
+.stamp-prize {
+    margin: auto;
+    padding: 20 0;
+    width: 100%;
+    height: 100%;
+}

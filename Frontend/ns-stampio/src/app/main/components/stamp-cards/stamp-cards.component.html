@@ -1,0 +1,18 @@
+<StackLayout class="container" *ngIf="!this.stampService.isLoading">
+    <StackLayout class="main">
+        <Label class="title" text="Omat Passit"></Label>
+        <ScrollView sdkExampleTitle sdkToggleNavButton>
+            <FlexboxLayout class="passit-container" flexWrap="wrap">
+                <StackLayout *ngFor="let card of this.stampService.stampCards" class="passi">
+                    <Button [text]="card.korttipohja.nimi" class="list-group-item"
+                        [nsRouterLink]="['/main/company', card.ID_leimapassi]"></Button>
+                    <Label class="stamps" [text]="card.leimalaskuri + ' / ' + card.korttipohja.leimamaara"></Label>
+                </StackLayout>
+            </FlexboxLayout>
+        </ScrollView>
+    </StackLayout>
+</StackLayout>
+<!-- Näytetään latausanimaatio, kunnes yritykset on haettu tietokannasta. -->
+<FlexboxLayout justifyContent="center" alignItems="center" *ngIf="this.stampService.isLoading">
+    <ActivityIndicator [busy]="this.stampService.isLoading"></ActivityIndicator>
+</FlexboxLayout>

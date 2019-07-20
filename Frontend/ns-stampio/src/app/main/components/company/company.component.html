@@ -1,0 +1,30 @@
+<!-- Yläosassa paluupainike ja logo. Alla leimakortti valittuun yritykseen. 
+     Huomaa, leimaosio on erillinen komponentti. -->
+<ActionBar>
+    <NavigationButton android.systemIcon="ic_menu_back" text="Back to ActionBar" (tap)="goBack()"></NavigationButton>
+    <Image src="~/images/logo_liila.png" stretch="none"></Image>
+</ActionBar>
+<FlexboxLayout *ngIf="!isLoadingPage" flexDirection="column" justifyContent="space-between">
+    <StackLayout>
+        <FlexboxLayout flexDirection="row" justifyContent="flex-end">
+            <Label class="expire-date" [text]="'Voimassa ' + expireDate" textWrap="true"></Label>
+        </FlexboxLayout>
+        <Label class="company-title h2" [text]="name"></Label>
+
+        <!-- Leimapassi -->
+        <FlexboxLayout class="stamps-container" flexWrap="wrap">
+            <StackLayout *ngFor="let mark of marks; index as i;" [attr.data-index]="i" class="stamp">
+                <Image *ngIf="mark.prize" class="stamp-prize" src="~/images/free.png"></Image>
+                <Image *ngIf="mark.check" class="stamp-check" src="~/images/leimamerkki.png"></Image>
+            </StackLayout>
+        </FlexboxLayout>
+
+        <Label class="card-info" [text]="prizeText" textWrap="true"></Label>
+    </StackLayout>
+    <!-- <Button *ngIf="!this.stampService.stampCardFull" class="qr-reader" text="Lue koodi" (tap)="openModal()"></Button> -->
+    <Button *ngIf="isFull" class="qr-reader" text="Käytä palkinto" (tap)="onUsePrize()"></Button>
+</FlexboxLayout>
+<!-- Näytetään latausanimaatio, kunnes yritykset on haettu tietokannasta. -->
+<FlexboxLayout justifyContent="center" alignItems="center" *ngIf="isLoadingPage">
+    <ActivityIndicator [busy]="isLoadingPage"></ActivityIndicator>
+</FlexboxLayout>

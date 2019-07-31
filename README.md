@@ -10,7 +10,7 @@ https://eelanet.github.io/demolab-portfolio/stampio.html
 
 ## Project
 
-This application was created in a group as a school project in 4 months. It was part of the Ticorporate demolab course. I was the main developer in this project. Most of the code included in this repository is written by me.
+This application was created in a group as a school project in 5 months. It was part of the Ticorporate demolab course. I was the main developer in this project. Most of the code included in this repository is written by me.
 
 ## Technology
 
